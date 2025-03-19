@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>میوه‌فروشی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>میوه‌فروشی</h1>
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="formula1.html">میوه فروشی</a></li>
+            <li><a href="formula2.html">مدرسه</a></li>
+            <li><a href="formula3.html">استخر</a></li>
+        </ul>
+    </header>
+    </nav>
+    <main>
+        <p class="explanation">
+            در اینجا می‌توانید قیمت هر محصول را به‌روزرسانی کنید و همچنین با مشخص کردن تعداد هر آیتم و میزان تخفیف،
+            قیمت نهایی را محاسبه کنید.
+        </p>
+        <div class="formula_handler">
+            <input type="text" id="price1" placeholder="قیمت سیب">
+            <input type="text" id="price2" placeholder="قیمت پرتقال">
+            <input type="text" id="price3" placeholder="قیمت موز">
+            <input type="text" id="quantity1" placeholder="تعداد سیب">
+            <input type="text" id="quantity2" placeholder="تعداد پرتقال">
+            <input type="text" id="quantity3" placeholder="تعداد موز">
+            <input type="text" id="discount" placeholder="تخفیف%">
+            <formula evaluator="(price1 * quantity1 + price2 * quantity2 + price3 * quantity3)*(100 - discount)"></formula>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Matin Mohammadi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

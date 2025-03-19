@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استخر</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>استخر</h1>
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="formula1.html">میوه فروشی</a></li>
+            <li><a href="formula2.html">مدرسه</a></li>
+            <li><a href="formula3.html">استخر</a></li>
+        </ul>
+    </header>
+    </nav>
+    <main>
+        <p class="explanation">
+            در اینجا، حجمی که در صفحه اول بدست آوردید و هزینه انتقال هر واحد آب را وارد کنید تا هزینه پر کردن استخر را بدست آورید.
+        </p>
+        <div class="formula_handler">
+            <input type="text" id="capacity" placeholder="حجم">
+            <input type="text" id="price_per_unit" placeholder="هزینه انتقال هر واحد">
+            <formula evaluator="capacity * price_per_unit"></formula>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Matin Mohammadi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

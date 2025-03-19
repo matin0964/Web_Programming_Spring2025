@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f0f8ff, #e6e6fa); /* Gradient background */
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* Align navigation items to the right */
+    background-color: #333;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 4rem; /* Add space between main content and footer */
+    background: rgba(255, 255, 255, 0.9); /* Subtle white background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto; /* Push footer to the bottom */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.explanation {
+    direction: rtl;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: right;
+    color: #444;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.formula_handler {
+    direction: rtl;
+    background-color: #f0f8ff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formula_handler input {
+    display: block;
+    width: calc(100% - 20px);
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formula-result {
+    margin-top: 1rem;
+    font-weight: bold;
+    color: darkorchid;
+    text-align: center;
+}
+
+#div1 {
+    border-left: 5px solid navy;
+    padding-left: 1rem;
+}
+
+#div2 {
+    border-left: 5px solid darkorange;
+    padding-left: 1rem;
+}
+
+#div3 {
+    border-left: 5px solid darkred;
+    padding-left: 1rem;
+}

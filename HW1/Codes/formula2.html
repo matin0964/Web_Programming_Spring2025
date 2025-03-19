@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسه</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>مدرسه</h1>
+    <nav class="container">
+        <ul>
+            <li><a href="index.html">خانه</a></li>
+            <li><a href="formula1.html">میوه فروشی</a></li>
+            <li><a href="formula2.html">مدرسه</a></li>
+            <li><a href="formula3.html">استخر</a></li>
+        </ul>
+    </header>
+    </nav>
+    <main>
+        <p class="explanation">
+            در اینجا می‌توانید با وارد کردن تعداد دانش‌آموزان، شهریه سالانه، تعداد معلمان، حقوق ماهانه هر معلم، تعداد ناظم‌ها، حقوق ماهانه هر ناظم و تعداد نیروهای خدماتی و حقوق ماهانه هر یک، میزان درآمد نهایی مدرسه را محاسبه کنید.
+        </p>
+        <div class="formula_handler">
+            <input type="text" id="students" placeholder="تعداد دانش‌آموزان">
+            <input type="text" id="tuition" placeholder="شهریه سالانه">
+            <input type="text" id="teachers" placeholder="تعداد معلمان">
+            <input type="text" id="teachers_salary" placeholder="حقوق معلمان">
+            <input type="text" id="moderators" placeholder="تعداد ناظمان">
+            <input type="text" id="moderators_salary" placeholder="حقوق ناظمان">
+            <input type="text" id="servers" placeholder="تعداد نیروهای خدماتی">
+            <input type="text" id="servers_salary" placeholder="حقوق نیروهای خدماتی">
+            <formula evaluator="students * tuition - 12*(teachers*teachers_salary + moderators*moderators_salary + servers*servers_salary)"></formula>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Matin Mohammadi. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
