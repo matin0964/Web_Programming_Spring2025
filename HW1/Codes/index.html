@@ -11,48 +11,52 @@
         <h1>محاسبه‌گر</h1>
     <nav class="container">
         <ul>
-            <li><a href="index.html">خانه</a></li>
-            <li><a href="formula1.html">میوه فروشی</a></li>
-            <li><a href="formula2.html">مدرسه</a></li>
-            <li><a href="formula3.html">استخر</a></li>
+            <li><a href="index.html" onclick="alert('شما در صفحه اصلی قرار دارید!')">خانه</a></li>
+            <li><a href="formula1.html" onclick="alert('به صفحه میوه فروشی خوش آمدید!')">میوه فروشی</a></li>
+            <li><a href="formula2.html" onclick="alert('به صفحه مدرسه خوش آمدید!')">مدرسه</a></li>
+            <li><a href="formula3.html" onclick="alert('به صفحه استخر خوش آمدید!')">استخر</a></li>
         </ul>
     </header>
     </nav>
     <main>
         <div id="div1" class="formula_handler">
             <p class="explanation">
-                در اینجا شما با وارد کردن قیمت هر میوه، تعداد میوه‌ها و تخفیفی که به هر میوه تعلق می‌گیرد، می‌توانید میزان پرداختی مشتری را محاسبه کنید<div class=""></div>
+                در اینجا شما با وارد کردن قیمت هر میوه، تعداد میوه‌ها و تخفیفی که به هر میوه تعلق می‌گیرد، می‌توانید میزان پرداختی مشتری را محاسبه کنید.
             </p>
             <input type="text" id="fee" placeholder="قیمت">
             <input type="text" id="count" placeholder="تعداد">
             <input type="text" id="discount" placeholder="تخفیف%">
-            <formula evaluator="count * fee * (100 - discount)"></formula>
+            <formula evaluator="count * fee * (100 - discount)/100"></formula>
         </div>
-        <!-- Formula Evaluators -->
          <div id="div2" class="formula_handler">
             <p class="explanation">
                 برای بدست آوردن درآمد مدرسه، تعداد دانش‌‌آموزان و شهریه را وارد کنید و سپس تعداد پرسنل و میزان حقوق آن‌ها را وارد کنید. در نتیجه 
                 میزان درآمد را مشاهده خواهید کرد.
             </p>
             <input type="text" id="number_of_students" placeholder="تعداد دانش آموزان">
-            <input type="text" id="tuition" placeholder="شهریه">
+            <input type="text" id="tuition" placeholder=" شهریه سالانه">
             <input type="text" id="number_of_staff" placeholder="تعداد کارکنان">
-            <input type="text" id="wage" placeholder="حقوق">
-            <formula evaluator="number_of_students * tuition - (number_of_staff * wage)"></formula>
+            <input type="text" id="wage" placeholder="حقوق ماهانه">
+            <formula evaluator="number_of_students * tuition - 12*(number_of_staff * wage)"></formula>
          </div>
          <div id="div3" class="formula_handler">
             <p class="explanation">
                 در اینجا برای بدست آوردن میزان آب مورد نیاز استخر، طول، عرض و ارتفاع آن را وارد کنید و در نتیجه میزان آب مورد نیاز را مشاهده کنید.
+                (در دو انتهای استخر یک پله وجود دارد که نیم متر از کف استخر فاصله دارد و طول آن نیز یک متر است)
             </p>
             <input type="text" id="depth" placeholder="عمق">
             <input type="text" id="width" placeholder="عرض">
             <input type="text" id="length" placeholder="طول">
-            <formula evaluator="depth * width * length"></formula>
+            <formula evaluator="depth * width * length - 0.5 * width * 1"></formula>
          </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 Matin Mohammadi. All rights reserved.</p>
-    </footer>
+         
+         <footer>
+             <p>&copy; 2025 Matin Mohammadi. All rights reserved.</p>
+             <p>Contact: 
+                 <a href="mailto:matin.mathematics@gmail.com">email</a> | 
+                 <a href="https://www.sharif.ir">401110329</a>
+                </p>
+            </footer>
+        </body>
     <script src="script.js"></script>
-</body>
 </html>

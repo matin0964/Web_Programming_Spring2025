@@ -28,7 +28,6 @@ class FormulaEvaluator {
     }
 
     isValidNumber(value) {
-        // Helper function to check if the input is a valid number
         return !isNaN(value) && value.trim() !== "";
     }
 
@@ -42,9 +41,10 @@ class FormulaEvaluator {
                 })
             );
             const result = new Function(...Object.keys(values), `return ${this.expression}`)(...Object.values(values));
-            this.outputElement.textContent = `Result: ${result.toFixed(2)}`;
+            this.outputElement.textContent = `${result.toFixed(2)}`;
         } catch (error) {
             this.outputElement.textContent = "فرمول نامعتبر";
+            
         }
     }
 }

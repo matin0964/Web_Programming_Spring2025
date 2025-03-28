@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #f0f8ff, #e6e6fa); /* Gradient background */
+    background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
     color: #333;
     min-height: 100vh;
     display: flex;
@@ -12,21 +12,24 @@ body {
 header {
     background-color: #4CAF50;
     color: white;
-    padding: 1rem 0;
+    padding: 0px;
     text-align: center;
     font-size: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
+    margin-right: 0;
     display: flex;
-    justify-content: flex-end; /* Align navigation items to the right */
+    justify-content: flex-start;
     background-color: #333;
     padding: 0.5rem 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    direction: rtl;
 }
 
 nav ul {
+    direction: rtl;
     list-style: none;
     display: flex;
     margin: 0;
@@ -55,19 +58,25 @@ main {
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 4rem; /* Add space between main content and footer */
-    background: rgba(255, 255, 255, 0.9); /* Subtle white background for content */
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
     padding: 1rem 0;
-    margin-top: auto; /* Push footer to the bottom */
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white;
+    background-color: #4CAF50;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+    padding: 8px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .explanation {
@@ -103,7 +112,7 @@ footer {
 .formula-result {
     margin-top: 1rem;
     font-weight: bold;
-    color: darkorchid;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
@@ -113,11 +122,62 @@ footer {
 }
 
 #div2 {
-    border-left: 5px solid darkorange;
+    border-left: 5px solid green;
     padding-left: 1rem;
 }
 
 #div3 {
-    border-left: 5px solid darkred;
+    border-left: 5px solid red;
     padding-left: 1rem;
+}
+
+#div4 {
+    border-left: 5px solid orange;
+    padding-left: 1rem;
+}
+
+#div5 {
+    border-left: 5px solid purple;
+    padding-left: 1rem;
+}
+
+#div6 {
+    border-left: 5px solid teal;
+    padding-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+
+    .formula_handler input {
+        font-size: 0.9rem;
+    }
 }
